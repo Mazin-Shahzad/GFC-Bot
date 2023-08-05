@@ -1,9 +1,4 @@
-#v2.2a3.0:
-# Fixed various typos and made some formatting changes
-# Made some changes to devnotes.md
-# Variables now use snake_case
-# Fixed date calculation errors by importing pytz and fixing timezones
-# Created keep_alive.py to handle the webserver and used UptimeRobot to ping the server every 30 mins to keep the bot online
+#v2.2
 
 import discord
 from discord.ext import commands
