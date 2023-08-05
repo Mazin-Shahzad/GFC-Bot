@@ -1,5 +1,5 @@
-#v2.2 alpha 1.0 --> v2.2a1.0
-# Token hidden
+#v2.2 alpha 2.0 --> v2.2a2.0
+# Improved devnotes using .md file
 
 import discord
 import os
@@ -218,23 +218,12 @@ async def send_fighter_details(ctx, name, details, selected_details=None):
 #Devnotes command:
 @bot.command(name="devnotes")
 async def response(ctx):
-  await ctx.send("""**DEVELOPER NOTES: Stable Release 2.1**
-    
-*Update Notes:*
-- Improved !!fighterdetails command
-- Fixed logic error in terminal startup message
-
-*Upcoming Features:*
-- Major new release version 3.0:
-
-*Technical Notes:*
-- GitHub, Replit, UptimeBot integration
-- .db files utilisation
-- bot token protection
-- command revamps
-- and more!
-""")
-
+  try:
+      with open("devnotes.md", "r", encoding="utf-8") as file:
+            notes = file.read()
+            await ctx.send(notes)
+  except FileNotFoundError:
+        await ctx.send("Error: devnotes not found.")
 
 # Starts the bot.
 bot.run(TOKEN)
