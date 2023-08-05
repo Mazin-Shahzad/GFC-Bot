@@ -1,24 +1,40 @@
-#v2.2 alpha 2.0 --> v2.2a2.0
-# Improved devnotes using .md file
+#v2.2a3.0:
+# Fixed various typos and made some formatting changes
+# Made some changes to devnotes.md
+# Variables now use snake_case
+# Fixed date calculation errors by importing pytz and fixing timezones
+# Created keep_alive.py to handle the webserver and used UptimeRobot to ping the server every 30 mins to keep the bot online
 
 import discord
-import os
 from discord.ext import commands
+import os
 from datetime import datetime as dt
+import pytz
+from keep_alive import keep_alive
 
-lastEventNo = 5
-nextEventNo = lastEventNo + 1
-lastEvent = f"GFC {lastEventNo:03}"
-nextEvent = f"GFC {nextEventNo:03}"
-lastEventDate = "20/06/23"
-nextEventDate = "6/08/23"
-cupEventDate = "16/02/24"
+last_event_no = 5
+next_event_no = last_event_no + 1
+last_event = f"GFC {last_event_no:03}"
+next_event = f"GFC {next_event_no:03}"
+last_event_date = "20/07/23"
+next_event_date = "6/08/23"
+cup_date = "16/02/24"
+uk_timezone = pytz.timezone("Europe/London")
 
-daysUntilNextEvent = abs(dt.strptime(nextEventDate, "%d/%m/%y") - dt.now()).days
+days_until_next_event = abs(
+    uk_timezone.localize(dt.strptime(next_event_date, "%d/%m/%y")) -
+    dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)
+).days
 
-daysSinceLastEvent = abs(dt.strptime(lastEventDate, "%d/%m/%y") - dt.now()).days
+days_since_last_event = abs(
+    uk_timezone.localize(dt.strptime(last_event_date, "%d/%m/%y")) -
+    dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)
+).days
 
-daysUntilCup = abs(dt.strptime(cupEventDate, "%d/%m/%y") - dt.now()).days
+days_until_cup = abs(
+    uk_timezone.localize(dt.strptime(cup_date, "%d/%m/%y")) -
+    dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)
+).days
 
 #Fighters database
 fighters = {
@@ -149,33 +165,40 @@ TOKEN = os.getenv("TOKEN")
 intents = discord.Intents.all()
 
 # Commands prefix
-bot = commands.Bot(command_prefix="!!", intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents)
+
 
 # On startup sends message in terminal.
 @bot.event
 async def on_ready():
-  await bot.change_presence(activity=discord.Game(name=f"{nextEvent}"))
+  await bot.change_presence(activity=discord.Game(name=f"{next_event}"))
   print(f"{bot.user} is active.")
 
 
 # Commands:
 @bot.command(name="gfcdates")
 async def response(ctx):
-  await ctx.send(
-      f"{nextEvent} is in {daysUntilNextEvent} days. {lastEvent} was {daysSinceLastEvent} days ago."
-  )
+  if days_until_next_event == 0:
+    await ctx.send(
+        f"Today is {next_event}. {last_event} was {days_since_last_event} day{'s' if days_since_last_event != 1 else ''} ago."
+    )
+  else:
+    await ctx.send(
+        f"{next_event} is in {days_until_next_event} day{'s' if days_until_next_event != 1 else ''}. {last_event} was {days_since_last_event} day{'s' if days_since_last_event != 1 else ''} ago."
+    )
+
 
 @bot.command(name="recap")
 async def response(ctx):
   await ctx.send(
-      f"Last time, at {lastEvent}, Shaheer beat Mazhar 3 rounds to 0.")
+      f"Last time, at {last_event}, Shaheer beat Mazhar 3 rounds to 0.")
+
 
 @bot.command(name="fighterdetails")
 async def response(ctx, name, *selected_details):
   if not name:
     await ctx.send("Error: Please enter a fighter's name.")
     return
-
   name = name.capitalize()
   if name == "All":
     for fighter, details in fighters.items():
@@ -219,11 +242,14 @@ async def send_fighter_details(ctx, name, details, selected_details=None):
 @bot.command(name="devnotes")
 async def response(ctx):
   try:
-      with open("devnotes.md", "r", encoding="utf-8") as file:
-            notes = file.read()
-            await ctx.send(notes)
+    with open("devnotes.md", "r", encoding="utf-8") as file:
+      notes = file.read()
+      await ctx.send(notes)
   except FileNotFoundError:
-        await ctx.send("Error: devnotes not found.")
+    await ctx.send("Error: devnotes not found.")
 
+
+# keep_alive() is run.
+keep_alive()
 # Starts the bot.
 bot.run(TOKEN)

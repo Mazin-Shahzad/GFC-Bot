@@ -544,6 +544,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "pytz"
+version = "2023.3"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pywin32-ctypes"
 version = "0.2.2"
 description = "A (partial) reimplementation of pywin32 using ctypes/cffi"
@@ -695,7 +703,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "9435ec82fb0202d6b55843386d29a5f63db325311dcc608e6508b7837630ed2a"
+content-hash = "2e6895ade37c53ff29de1a615462664ff565c7e6aca5fd570df5e7f6abae11df"
 
 [metadata.files]
 aiohttp = []
@@ -745,6 +753,7 @@ poetry-core = []
 ptyprocess = []
 pycparser = []
 pylev = []
+pytz = []
 pywin32-ctypes = []
 requests = []
 requests-toolbelt = []
