@@ -14,11 +14,9 @@ lastEventDate = "20/06/23"
 nextEventDate = "6/08/23"
 cupEventDate = "16/02/24"
 
-daysUntilNextEvent = abs(dt.strptime(nextEventDate, "%d/%m/%y") -
-                         dt.now()).days
+daysUntilNextEvent = abs(dt.strptime(nextEventDate, "%d/%m/%y") - dt.now()).days
 
-daysSinceLastEvent = abs(dt.strptime(lastEventDate, "%d/%m/%y") -
-                         dt.now()).days
+daysSinceLastEvent = abs(dt.strptime(lastEventDate, "%d/%m/%y") - dt.now()).days
 
 daysUntilCup = abs(dt.strptime(cupEventDate, "%d/%m/%y") - dt.now()).days
 
@@ -153,7 +151,6 @@ intents = discord.Intents.all()
 # Commands prefix
 bot = commands.Bot(command_prefix="!!", intents=intents)
 
-
 # On startup sends message in terminal.
 @bot.event
 async def on_ready():
@@ -168,12 +165,10 @@ async def response(ctx):
       f"{nextEvent} is in {daysUntilNextEvent} days. {lastEvent} was {daysSinceLastEvent} days ago."
   )
 
-
 @bot.command(name="recap")
 async def response(ctx):
   await ctx.send(
       f"Last time, at {lastEvent}, Shaheer beat Mazhar 3 rounds to 0.")
-
 
 @bot.command(name="fighterdetails")
 async def response(ctx, name, *selected_details):
