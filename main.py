@@ -1,4 +1,4 @@
-#v2.2
+#v2.2.1
 
 import discord
 from discord.ext import commands
@@ -7,12 +7,12 @@ from datetime import datetime as dt
 import pytz
 from keep_alive import keep_alive
 
-last_event_no = 5
+last_event_no = 6
 next_event_no = last_event_no + 1
 last_event = f"GFC {last_event_no:03}"
 next_event = f"GFC {next_event_no:03}"
-last_event_date = "20/07/23"
-next_event_date = "6/08/23"
+last_event_date = "06/08/23"
+next_event_date = "1/09/23"
 cup_date = "16/02/24"
 uk_timezone = pytz.timezone("Europe/London")
 
@@ -75,16 +75,16 @@ fighters = {
     "Ayaan": {
         "weight_class": "LIGHTWEIGHT",
         "weight": "52 kg",
-        "record": "1-0-0",
-        "last_fight": "GFC 002",
+        "record": "1-1-0",
+        "last_fight": "GFC 006",
         "last_fight_result":
-        "Ayaan lost to Mazhar 1 round to 2 (Overturned by GFC Council)",
-        "pound_for_pound_rank": 5,
-        "total_fouls": 2,
+        "Ayaan lost to Mazhar 1 round to 2",
+        "pound_for_pound_rank": 6,
+        "total_fouls": 3,
         "current_champion": False,
         "former_champion": False,
-        "total_rounds_won": 1,
-        "total_rounds_lost": 0
+        "total_rounds_won": 2,
+        "total_rounds_lost": 2
     },
     "Ubaid": {
         "weight_class": "MIDDLEWEIGHT",
@@ -141,15 +141,15 @@ fighters = {
     "Mazhar": {
         "weight_class": "LIGHT-HEAVYWEIGHT",
         "weight": "75 kg",
-        "record": "0-4-0",
-        "last_fight": "GFC 005",
-        "last_fight_result": "Mazhar lost to Shaheer 0 rounds to 3",
-        "pound_for_pound_rank": 6,
-        "total_fouls": 7,
+        "record": "1-4-0",
+        "last_fight": "GFC 006",
+        "last_fight_result": "Mazhar Beat Ayaan 2 rounds to 1",
+        "pound_for_pound_rank": 5,
+        "total_fouls": 9,
         "current_champion": False,
         "former_champion": False,
-        "total_rounds_won": 3,
-        "total_rounds_lost": 9
+        "total_rounds_won": 5,
+        "total_rounds_lost": 10
     }
 }
 
@@ -186,7 +186,7 @@ async def response(ctx):
 @bot.command(name="recap")
 async def response(ctx):
   await ctx.send(
-      f"Last time, at {last_event}, Shaheer beat Mazhar 3 rounds to 0.")
+      f"Last time, at {last_event}, Mazhar beat Ayaan 2 rounds to 1.")
 
 
 @bot.command(name="fighterdetails")
