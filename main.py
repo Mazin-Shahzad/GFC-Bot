@@ -1,4 +1,4 @@
-#v2.2.1
+#v2.2.2
 
 import discord
 from discord.ext import commands
@@ -12,7 +12,7 @@ next_event_no = last_event_no + 1
 last_event = f"GFC {last_event_no:03}"
 next_event = f"GFC {next_event_no:03}"
 last_event_date = "06/08/23"
-next_event_date = "1/09/23"
+next_event_date = "9/08/23"
 cup_date = "16/02/24"
 uk_timezone = pytz.timezone("Europe/London")
 

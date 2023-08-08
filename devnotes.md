@@ -1,8 +1,7 @@
-# DEVELOPMENT NOTES: v2.2.1
+# DEVELOPMENT NOTES: v2.2.2
 
 ## Update Notes:
-- fixed various typos and made some changes to formatting
-- updated fighters database following GFC 006  
+- updated next_event_date to refelct correct GFC 007 date
 
 ## Upcoming:
 - Major new release version 3.0
