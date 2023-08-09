@@ -1,8 +1,7 @@
-# DEVELOPMENT NOTES: v2.4
+# DEVELOPMENT NOTES: v2.4.1
 
 ## Update Notes:
-- updated fighters database following GFC 007
-- revamped `!gfcdates` for messages to take into account events that are today, yesterday, tomorrow, etc
+- fixed error caused by missing coma in `fighters.json`
 
 ## Upcoming:
 - Major new release version 3.0
