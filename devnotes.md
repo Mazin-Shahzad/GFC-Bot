@@ -1,7 +1,7 @@
-# DEVELOPMENT NOTES: v2.4.1
+# DEVELOPMENT NOTES: v2.4.2
 
 ## Update Notes:
-- fixed error caused by missing coma in `fighters.json`
+- fixed Mazhar's rounds lost count in `fighters.json` (was 10 --> 11)
 
 ## Upcoming:
 - Major new release version 3.0
