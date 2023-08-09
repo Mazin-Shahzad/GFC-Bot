@@ -1,7 +1,7 @@
-# DEVELOPMENT NOTES: v2.4.2
+# DEVELOPMENT NOTES: v2.4.3
 
 ## Update Notes:
-- fixed Mazhar's rounds lost count in `fighters.json` (was 10 --> 11)
+- fixed Ayaan's rounds won count in `fighters.json` (was 4 --> 2)
 
 ## Upcoming:
 - Major new release version 3.0
