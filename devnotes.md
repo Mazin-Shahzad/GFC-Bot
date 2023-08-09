@@ -1,9 +1,8 @@
-# DEVELOPMENT NOTES: v2.3
+# DEVELOPMENT NOTES: v2.4
 
 ## Update Notes:
-- created `fighters.json`
-- dumped data from `fighters `dictionary to `fighters.json`
-- implemented functionality to access fighters' data from `fighters.json` and integrated it with `!fighterdetails`
+- updated fighters database following GFC 007
+- revamped `!gfcdates` for messages to take into account events that are today, yesterday, tomorrow, etc
 
 ## Upcoming:
 - Major new release version 3.0

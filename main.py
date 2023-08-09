@@ -1,4 +1,4 @@
-#v2.3
+#v2.4
 
 import discord
 from discord.ext import commands
@@ -8,29 +8,25 @@ import pytz
 from keep_alive import keep_alive
 import json
 
-last_event_no = 6
+last_event_no = 7
 next_event_no = last_event_no + 1
 last_event = f"GFC {last_event_no:03}"
 next_event = f"GFC {next_event_no:03}"
-last_event_date = "06/08/23"
-next_event_date = "9/08/23"
-cup_date = "16/02/24"
+last_event_date = "09/08/23"
+next_event_date = "tbd"
 uk_timezone = pytz.timezone("Europe/London")
 
-days_until_next_event = abs(
-    uk_timezone.localize(dt.strptime(next_event_date, "%d/%m/%y")) -
-    dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)
-).days
+if next_event_date == "tbd":
+  days_until_next_event = "undecided"
+else: 
+  days_until_next_event = abs(uk_timezone.localize(dt.strptime(next_event_date, "%d/%m/%y")) - dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)).days
+  
 
 days_since_last_event = abs(
     uk_timezone.localize(dt.strptime(last_event_date, "%d/%m/%y")) -
     dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)
 ).days
 
-days_until_cup = abs(
-    uk_timezone.localize(dt.strptime(cup_date, "%d/%m/%y")) -
-    dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)
-).days
 
 #Fighters database
 def load_fighters_data():
@@ -54,24 +50,31 @@ async def on_ready():
   await bot.change_presence(activity=discord.Game(name=f"{next_event}"))
   print(f"{bot.user} is active.")
 
-
 # Commands:
 @bot.command(name="gfcdates")
 async def response(ctx):
-  if days_until_next_event == 0:
-    await ctx.send(
-        f"Today is {next_event}. {last_event} was {days_since_last_event} day{'s' if days_since_last_event != 1 else ''} ago."
-    )
+  if days_until_next_event == "undecided":
+    next_event_text = f"A date for {next_event} has not yet been set."
+  elif days_until_next_event == 0:
+    next_event_text = f"{next_event} is today."
+  elif days_until_next_event == 1:
+    next_event_text = f"{next_event} is tomorrow."
   else:
-    await ctx.send(
-        f"{next_event} is in {days_until_next_event} day{'s' if days_until_next_event != 1 else ''}. {last_event} was {days_since_last_event} day{'s' if days_since_last_event != 1 else ''} ago."
-    )
+    next_event_text = f"{next_event} is in {days_until_next_event} days."
 
+  if days_since_last_event == 0: 
+    last_event_text = f"{last_event} was today."
+  elif days_since_last_event == 1: 
+    last_event_text = f"{last_event} was yesterday."
+  else:
+    last_event_text = f"{last_event} is in {days_since_last_event} days."
+
+  await ctx.send(f"{next_event_text} {last_event_text}")
 
 @bot.command(name="recap")
 async def response(ctx):
   await ctx.send(
-      f"Last time, at {last_event}, Mazhar beat Ayaan 2 rounds to 1.")
+      f"Last time, at {last_event}, Daniyal lost to Mazhar 2 rounds by disqualification: >2 fouls and Daniyal lost to Sharafat 2 rounds to 1.")
 
 
 @bot.command(name="fighterdetails")

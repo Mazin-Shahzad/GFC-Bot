@@ -44,11 +44,11 @@
     "record": "1-1-0",
     "last_fight": "GFC 006",
     "last_fight_result": "Ayaan lost to Mazhar 1 round to 2",
-    "pound_for_pound_rank": 6,
+    "pound_for_pound_rank": 7,
     "total_fouls": 3,
     "current_champion": false,
     "former_champion": false,
-    "total_rounds_won": 2,
+    "total_rounds_won": 4,
     "total_rounds_lost": 2
   },
   "Ubaid": {
@@ -67,15 +67,15 @@
   "Daniyal": {
     "weight_class": "HEAVYWEIGHT",
     "weight": "95 kg",
-    "record": "0-0-0",
-    "last_fight": null,
-    "last_fight_result": null,
-    "pound_for_pound_rank": null,
-    "total_fouls": 0,
+    "record": "0-2-0",
+    "last_fight": "GFC 007",
+    "last_fight_result": "Daniyal lost to Mazhar 2 rounds by disqualification: >2 fouls and Daniyal lost to Sharafat 2 rounds to 1"
+    "pound_for_pound_rank": 8,
+    "total_fouls": 5,
     "current_champion": false,
     "former_champion": false,
-    "total_rounds_won": 0,
-    "total_rounds_lost": 0
+    "total_rounds_won": 2,
+    "total_rounds_lost": 4
   },
   "Musa": {
     "weight_class": "LIGHT-HEAVYWEIGHT",
@@ -93,24 +93,24 @@
   "Sharafat": {
     "weight_class": "LIGHTWEIGHT",
     "weight": "50 kg",
-    "record": "0-0-0",
-    "last_fight": null,
-    "last_fight_result": null,
-    "pound_for_pound_rank": null,
-    "total_fouls": 0,
+    "record": "1-0-0",
+    "last_fight": "GFC 007",
+    "last_fight_result": "Sharafat beat Daniyal 2 rounds to 1",
+    "pound_for_pound_rank": 6,
+    "total_fouls": 2,
     "current_champion": false,
     "former_champion": false,
-    "total_rounds_won": 0,
-    "total_rounds_lost": 0
+    "total_rounds_won": 2,
+    "total_rounds_lost": 1
   },
   "Mazhar": {
     "weight_class": "LIGHT-HEAVYWEIGHT",
     "weight": "75 kg",
-    "record": "1-4-0",
-    "last_fight": "GFC 006",
-    "last_fight_result": "Mazhar Beat Ayaan 2 rounds to 1",
+    "record": "2-4-0",
+    "last_fight": "GFC 007",
+    "last_fight_result": "Mazhar beat Daniyal 2 rounds to 1 by disqualification: >2 fouls",
     "pound_for_pound_rank": 5,
-    "total_fouls": 9,
+    "total_fouls": 11,
     "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 5,
