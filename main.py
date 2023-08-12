@@ -60,7 +60,7 @@ async def response(ctx):
   elif days_until_next_event == 1:
     next_event_text = f"{next_event} is tomorrow."
   else:
-    next_event_text = f"{next_event} is in {days_until_next_event} days."
+    next_event_text = f"{next_event} was {days_until_next_event} days ago."
 
   if days_since_last_event == 0: 
     last_event_text = f"{last_event} was today."
