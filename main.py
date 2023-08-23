@@ -1,4 +1,4 @@
-#v2.4.3
+#v2.4.4
 
 import discord
 from discord.ext import commands
@@ -18,9 +18,11 @@ uk_timezone = pytz.timezone("Europe/London")
 
 if next_event_date == "tbd":
   days_until_next_event = "undecided"
-else: 
-  days_until_next_event = abs(uk_timezone.localize(dt.strptime(next_event_date, "%d/%m/%y")) - dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)).days
-  
+else:
+  days_until_next_event = abs(
+      uk_timezone.localize(dt.strptime(next_event_date, "%d/%m/%y")) -
+      dt.now(uk_timezone).replace(hour=0, minute=0, second=0, microsecond=0)
+  ).days
 
 days_since_last_event = abs(
     uk_timezone.localize(dt.strptime(last_event_date, "%d/%m/%y")) -
@@ -30,9 +32,10 @@ days_since_last_event = abs(
 
 #Fighters database
 def load_fighters_data():
-    with open("fighters.json", "r") as f:
-        fighters = json.load(f)
-    return fighters
+  with open("fighters.json", "r") as f:
+    fighters = json.load(f)
+  return fighters
+
 
 # Bot token.
 TOKEN = os.getenv("TOKEN")
@@ -50,6 +53,7 @@ async def on_ready():
   await bot.change_presence(activity=discord.Game(name=f"{next_event}"))
   print(f"{bot.user} is active.")
 
+
 # Commands:
 @bot.command(name="gfcdates")
 async def response(ctx):
@@ -60,21 +64,23 @@ async def response(ctx):
   elif days_until_next_event == 1:
     next_event_text = f"{next_event} is tomorrow."
   else:
-    next_event_text = f"{next_event} was {days_until_next_event} days ago."
+    next_event_text = f"{next_event} is in {days_until_next_event} days."
 
-  if days_since_last_event == 0: 
+  if days_since_last_event == 0:
     last_event_text = f"{last_event} was today."
-  elif days_since_last_event == 1: 
+  elif days_since_last_event == 1:
     last_event_text = f"{last_event} was yesterday."
   else:
-    last_event_text = f"{last_event} is in {days_since_last_event} days."
+    last_event_text = f"{last_event} was {days_since_last_event} days ago."
 
   await ctx.send(f"{next_event_text} {last_event_text}")
+
 
 @bot.command(name="recap")
 async def response(ctx):
   await ctx.send(
-      f"Last time, at {last_event}, Daniyal lost to Mazhar 2 rounds by disqualification: >2 fouls and Daniyal lost to Sharafat 2 rounds to 1.")
+      f"Last time, at {last_event}, Daniyal lost to Mazhar 2 rounds by disqualification: >2 fouls and Daniyal lost to Sharafat 2 rounds to 1."
+  )
 
 
 @bot.command(name="fighterdetails")
@@ -120,6 +126,7 @@ async def send_fighter_details(ctx, name, details, selected_details=None):
       formatted_key = key.replace('_', ' ').title()
       msg += f"{formatted_key}: {value}\n"
   await ctx.send(msg)
+
 
 #Devnotes command:
 @bot.command(name="devnotes")
