@@ -1,7 +1,8 @@
-# DEVELOPMENT NOTES: v2.4.3
+# DEVELOPMENT NOTES: v2.4.4
 
 ## Update Notes:
-- fixed Ayaan's rounds won count in `fighters.json` (was 4 --> 2)
+- updated pfp rankings in `fighters.json`
+- improved formatting of `!gfcdates`response
 
 ## Upcoming:
 - Major new release version 3.0
