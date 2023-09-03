@@ -22,8 +22,8 @@
     "total_fouls": 0,
     "current_champion": false,
     "former_champion": true,
-    "total_rounds_won": 5,
-    "total_rounds_lost": 3
+    "total_rounds_won": 3,
+    "total_rounds_lost": 2
   },
   "Mazin": {
     "weight_class": "LIGHTWEIGHT",
@@ -113,7 +113,7 @@
     "total_fouls": 11,
     "current_champion": false,
     "former_champion": false,
-    "total_rounds_won": 8,
-    "total_rounds_lost": 13
+    "total_rounds_won": 5,
+    "total_rounds_lost": 11
   }
 }
