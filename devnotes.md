@@ -1,8 +1,8 @@
-# DEVELOPMENT NOTES: v2.4.4
+# DEVELOPMENT NOTES: v2.5
 
 ## Update Notes:
-- updated pfp rankings in `fighters.json`
-- improved formatting of `!gfcdates`response
+- updated records in `fighters.json` following GFC 008
+- updated `gfcdates`
 
 ## Upcoming:
 - Major new release version 3.0

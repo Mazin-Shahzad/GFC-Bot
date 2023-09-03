@@ -16,14 +16,27 @@
     "weight_class": "LIGHTWEIGHT",
     "weight": "57 kg",
     "record": "1-0-0",
-    "last_fight": "GFC 001",
-    "last_fight_result": "Mowahid beat Mazhar 3 rounds to 2",
-    "pound_for_pound_rank": 6,
-    "total_fouls": 0,
+    "last_fight": "GFC 008",
+    "last_fight_result": "Mowahid beat Mazhar 2 rounds to 1",
+    "pound_for_pound_rank": 2,
+    "total_fouls": 2,
     "current_champion": false,
     "former_champion": true,
-    "total_rounds_won": 3,
-    "total_rounds_lost": 2
+    "total_rounds_won": 5,
+    "total_rounds_lost": 3
+  },
+    "Mazhar": {
+    "weight_class": "LIGHT-HEAVYWEIGHT",
+    "weight": "75 kg",
+    "record": "2-4-0",
+    "last_fight": "GFC 008",
+    "last_fight_result": "Mazhar lost 2 rounds to 1 to Mowahid",
+    "pound_for_pound_rank": 5,
+    "total_fouls": 12,
+    "current_champion": false,
+    "former_champion": false,
+    "total_rounds_won": 8,
+    "total_rounds_lost": 13
   },
   "Mazin": {
     "weight_class": "LIGHTWEIGHT",
@@ -31,9 +44,22 @@
     "record": "1-0-0",
     "last_fight": "GFC 002",
     "last_fight_result": "Mazin beat Ubaid 2 rounds to 1",
-    "pound_for_pound_rank": 5,
+    "pound_for_pound_rank": 6,
     "total_fouls": 1,
     "current_champion": true,
+    "former_champion": false,
+    "total_rounds_won": 2,
+    "total_rounds_lost": 1
+  },
+    "Sharafat": {
+    "weight_class": "LIGHTWEIGHT",
+    "weight": "50 kg",
+    "record": "1-0-0",
+    "last_fight": "GFC 007",
+    "last_fight_result": "Sharafat beat Daniyal 2 rounds to 1",
+    "pound_for_pound_rank": 4,
+    "total_fouls": 2,
+    "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 2,
     "total_rounds_lost": 1
@@ -64,19 +90,6 @@
     "total_rounds_won": 3,
     "total_rounds_lost": 6
   },
-  "Daniyal": {
-    "weight_class": "HEAVYWEIGHT",
-    "weight": "95 kg",
-    "record": "0-2-0",
-    "last_fight": "GFC 007",
-    "last_fight_result": "Daniyal lost to Mazhar 2 rounds by disqualification: >2 fouls and Daniyal lost to Sharafat 2 rounds to 1",
-    "pound_for_pound_rank": 8,
-    "total_fouls": 5,
-    "current_champion": false,
-    "former_champion": false,
-    "total_rounds_won": 2,
-    "total_rounds_lost": 4
-  },
   "Musa": {
     "weight_class": "LIGHT-HEAVYWEIGHT",
     "weight": "75 kg",
@@ -90,30 +103,17 @@
     "total_rounds_won": 0,
     "total_rounds_lost": 0
   },
-  "Sharafat": {
-    "weight_class": "LIGHTWEIGHT",
-    "weight": "50 kg",
-    "record": "1-0-0",
+    "Daniyal": {
+    "weight_class": "HEAVYWEIGHT",
+    "weight": "95 kg",
+    "record": "0-2-0",
     "last_fight": "GFC 007",
-    "last_fight_result": "Sharafat beat Daniyal 2 rounds to 1",
-    "pound_for_pound_rank": 4,
-    "total_fouls": 2,
+    "last_fight_result": "Daniyal lost to Mazhar 2 rounds by disqualification: >2 fouls and Daniyal lost to Sharafat 2 rounds to 1",
+    "pound_for_pound_rank": 8,
+    "total_fouls": 5,
     "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 2,
-    "total_rounds_lost": 1
-  },
-  "Mazhar": {
-    "weight_class": "LIGHT-HEAVYWEIGHT",
-    "weight": "75 kg",
-    "record": "2-4-0",
-    "last_fight": "GFC 007",
-    "last_fight_result": "Mazhar beat Daniyal 2 rounds to 1 by disqualification: >2 fouls",
-    "pound_for_pound_rank": 2,
-    "total_fouls": 11,
-    "current_champion": false,
-    "former_champion": false,
-    "total_rounds_won": 5,
-    "total_rounds_lost": 11
+    "total_rounds_lost": 4
   }
 }

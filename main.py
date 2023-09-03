@@ -1,5 +1,3 @@
-#v2.4.4
-
 import discord
 from discord.ext import commands
 import os
@@ -8,11 +6,13 @@ import pytz
 from keep_alive import keep_alive
 import json
 
-last_event_no = 7
-next_event_no = last_event_no + 1
+last_event_no = 8
+next_event_no = 9
+
 last_event = f"GFC {last_event_no:03}"
 next_event = f"GFC {next_event_no:03}"
-last_event_date = "09/08/23"
+
+last_event_date = "02/09/23"
 next_event_date = "tbd"
 uk_timezone = pytz.timezone("Europe/London")
 
@@ -66,9 +66,7 @@ async def response(ctx):
   else:
     next_event_text = f"{next_event} is in {days_until_next_event} days."
 
-  if days_since_last_event == 0:
-    last_event_text = f"{last_event} was today."
-  elif days_since_last_event == 1:
+  if days_since_last_event == 1:
     last_event_text = f"{last_event} was yesterday."
   else:
     last_event_text = f"{last_event} was {days_since_last_event} days ago."
@@ -79,7 +77,7 @@ async def response(ctx):
 @bot.command(name="recap")
 async def response(ctx):
   await ctx.send(
-      f"Last time, at {last_event}, Daniyal lost to Mazhar 2 rounds by disqualification: >2 fouls and Daniyal lost to Sharafat 2 rounds to 1."
+      f"Last time, at {last_event}, Mowahid beat Mazhar 2 rounds to 1 in a VERY close match."
   )
 
 
