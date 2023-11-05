@@ -6,13 +6,13 @@ import pytz
 from keep_alive import keep_alive
 import json
 
-last_event_no = 8
-next_event_no = 9
+last_event_no = 9
+next_event_no = 10
 
 last_event = f"GFC {last_event_no:03}"
 next_event = f"GFC {next_event_no:03}"
 
-last_event_date = "02/09/23"
+last_event_date = "04/10/23"
 next_event_date = "tbd"
 uk_timezone = pytz.timezone("Europe/London")
 

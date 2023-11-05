@@ -1,13 +1,9 @@
-# DEVELOPMENT NOTES: v2.5
+# DEVELOPMENT NOTES: v2.4.6
 
 ## Update Notes:
-- updated records in `fighters.json` following GFC 008
+- updated records in `fighters.json` following GFC 009
 - updated `gfcdates`
 
-## Upcoming:
-- Major new release version 3.0
-
-## To Do: by v3.0
+## To Do:
 -  command revamps
 -  data input
--  and more!
