@@ -1,8 +1,8 @@
-# DEVELOPMENT NOTES: v2.4.6
+# DEVELOPMENT NOTES: v2.4.7
 
 ## Update Notes:
-- updated records in `fighters.json` following GFC 009
-- updated `gfcdates`
+- updated recap following GFC 009 as forgotten beforehand.
+- fixed typo in GFC 009 date.
 
 ## To Do:
 -  command revamps

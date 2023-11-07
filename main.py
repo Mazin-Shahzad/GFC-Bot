@@ -12,7 +12,7 @@ next_event_no = 10
 last_event = f"GFC {last_event_no:03}"
 next_event = f"GFC {next_event_no:03}"
 
-last_event_date = "04/10/23"
+last_event_date = "04/11/23"
 next_event_date = "tbd"
 uk_timezone = pytz.timezone("Europe/London")
 
@@ -77,7 +77,7 @@ async def response(ctx):
 @bot.command(name="recap")
 async def response(ctx):
   await ctx.send(
-      f"Last time, at {last_event}, Mowahid beat Mazhar 2 rounds to 1 in a VERY close match."
+      f"Last time, at {last_event}, Sharafat fought twice in one night! Beating Daniyal once again by disqualification, but losing to Mazin in all 3 rounds."
   )
 
 
