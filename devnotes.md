@@ -1,8 +1,8 @@
-# DEVELOPMENT NOTES: v2.4.6
+# DEVELOPMENT NOTES: v2.5
 
 ## Update Notes:
-- updated records in `fighters.json` following GFC 009
-- updated `gfcdates`
+- added points to fighters' details
+- added Shayaan and Abdullah fighters database
 
 ## To Do:
 -  command revamps
