@@ -10,20 +10,8 @@
     "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 6,
-    "total_rounds_lost": 0
-  },
-  "Mowahid": {
-    "weight_class": "LIGHTWEIGHT",
-    "weight": "57 kg",
-    "record": "1-0-0",
-    "last_fight": "GFC 008",
-    "last_fight_result": "Mowahid beat Mazhar 2 rounds to 1",
-    "pound_for_pound_rank": 2,
-    "total_fouls": 2,
-    "current_champion": false,
-    "former_champion": true,
-    "total_rounds_won": 5,
-    "total_rounds_lost": 3
+    "total_rounds_lost": 0,
+    "points": 6
   },
   "Mazin": {
     "weight_class": "LIGHTWEIGHT",
@@ -36,7 +24,22 @@
     "current_champion": true,
     "former_champion": false,
     "total_rounds_won": 5,
-    "total_rounds_lost": 1
+    "total_rounds_lost": 1,
+    "points": 6
+  },
+  "Mowahid": {
+    "weight_class": "LIGHTWEIGHT",
+    "weight": "57 kg",
+    "record": "1-0-0",
+    "last_fight": "GFC 008",
+    "last_fight_result": "Mowahid beat Mazhar 2 rounds to 1",
+    "pound_for_pound_rank": 2,
+    "total_fouls": 2,
+    "current_champion": false,
+    "former_champion": true,
+    "total_rounds_won": 5,
+    "total_rounds_lost": 3,
+    "points": 6
   },
     "Sharafat": {
     "weight_class": "LIGHTWEIGHT",
@@ -49,7 +52,8 @@
     "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 5,
-    "total_rounds_lost": 4
+    "total_rounds_lost": 4,
+    "points": 6
   },
   "Mazhar": {
   "weight_class": "LIGHT-HEAVYWEIGHT",
@@ -62,7 +66,8 @@
   "current_champion": false,
   "former_champion": false,
   "total_rounds_won": 8,
-  "total_rounds_lost": 13
+  "total_rounds_lost": 13,
+  "points": 6
   },
   "Ayaan": {
     "weight_class": "LIGHTWEIGHT",
@@ -75,7 +80,8 @@
     "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 2,
-    "total_rounds_lost": 2
+    "total_rounds_lost": 2,
+    "points": 3
   },
   "Ubaid": {
     "weight_class": "LIGHT-HEAVYWEIGHT",
@@ -88,7 +94,8 @@
     "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 3,
-    "total_rounds_lost": 6
+    "total_rounds_lost": 6,
+    "points": 2
   },
   "Musa": {
     "weight_class": "LIGHT-HEAVYWEIGHT",
@@ -101,7 +108,36 @@
     "current_champion": false,
     "former_champion": false,
     "total_rounds_won": 0,
-    "total_rounds_lost": 0
+    "total_rounds_lost": 0,
+    "points": 0
+  },
+  "Abdullah": {
+    "weight_class": "FLYWEIGHT",
+    "weight": "45 kg",
+    "record": "0-0-0",
+    "last_fight": null,
+    "last_fight_result": null,
+    "pound_for_pound_rank": null,
+    "total_fouls": 0,
+    "current_champion": false,
+    "former_champion": false,
+    "total_rounds_won": 0,
+    "total_rounds_lost": 0,
+    "points": 0
+  },
+  "Shayaan": {
+    "weight_class": "LIGHTWEIGHT",
+    "weight": "50 kg",
+    "record": "0-0-0",
+    "last_fight": null,
+    "last_fight_result": null,
+    "pound_for_pound_rank": null,
+    "total_fouls": 0,
+    "current_champion": false,
+    "former_champion": false,
+    "total_rounds_won": 0,
+    "total_rounds_lost": 0,
+    "points": 0
   },
     "Daniyal": {
     "weight_class": "HEAVYWEIGHT",

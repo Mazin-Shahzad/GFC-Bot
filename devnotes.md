@@ -1,8 +1,8 @@
-# DEVELOPMENT NOTES: v2.4.7
+# DEVELOPMENT NOTES: v2.5
 
 ## Update Notes:
-- updated recap following GFC 009 as forgotten beforehand.
-- fixed typo in GFC 009 date.
+- added points to fighters' details
+- added Shayaan and Abdullah fighters database
 
 ## To Do:
 -  command revamps
