@@ -1,7 +1,7 @@
 {
   "Shaheer": {
     "weight_class": "LIGHT-HEAVYWEIGHT",
-    "weight": "75 kg",
+    "weight": "73 kg",
     "record": "2-0-0",
     "last_fight": "GFC 005",
     "last_fight_result": "Shaheer beat Mazhar 3 rounds to 0",
@@ -29,8 +29,8 @@
   },
   "Mowahid": {
     "weight_class": "LIGHTWEIGHT",
-    "weight": "57 kg",
-    "record": "1-0-0",
+    "weight": "55 kg",
+    "record": "2-0-0",
     "last_fight": "GFC 008",
     "last_fight_result": "Mowahid beat Mazhar 2 rounds to 1",
     "pound_for_pound_rank": 2,
@@ -57,8 +57,8 @@
   },
   "Mazhar": {
   "weight_class": "LIGHT-HEAVYWEIGHT",
-  "weight": "75 kg",
-  "record": "2-4-0",
+  "weight": "78 kg",
+  "record": "2-5-0",
   "last_fight": "GFC 008",
   "last_fight_result": "Mazhar lost 2 rounds to 1 to Mowahid",
   "pound_for_pound_rank": 5,
@@ -71,7 +71,7 @@
   },
   "Ayaan": {
     "weight_class": "LIGHTWEIGHT",
-    "weight": "52 kg",
+    "weight": "59 kg",
     "record": "1-1-0",
     "last_fight": "GFC 006",
     "last_fight_result": "Ayaan lost to Mazhar 1 round to 2",
@@ -84,8 +84,8 @@
     "points": 3
   },
   "Ubaid": {
-    "weight_class": "LIGHT-HEAVYWEIGHT",
-    "weight": "72 kg",
+    "weight_class": "MIDDLEWEIGHT",
+    "weight": "68 kg",
     "record": "1-2-0",
     "last_fight": "GFC 004",
     "last_fight_result": "Ubaid beat Mazhar 2 rounds to 1",
@@ -99,7 +99,7 @@
   },
   "Musa": {
     "weight_class": "LIGHT-HEAVYWEIGHT",
-    "weight": "75 kg",
+    "weight": "88 kg",
     "record": "0-0-0",
     "last_fight": null,
     "last_fight_result": null,
@@ -109,7 +109,7 @@
     "former_champion": false,
     "total_rounds_won": 0,
     "total_rounds_lost": 0,
-    "points": 0
+    "points": 1
   },
   "Abdullah": {
     "weight_class": "FLYWEIGHT",
@@ -141,7 +141,7 @@
   },
     "Daniyal": {
     "weight_class": "HEAVYWEIGHT",
-    "weight": "95 kg",
+    "weight": "96 kg",
     "record": "0-3-0",
     "last_fight": "GFC 009",
     "last_fight_result": "Daniyal lost to Sharafat by disqualification: >2 fouls",

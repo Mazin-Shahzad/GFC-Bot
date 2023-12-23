@@ -9,11 +9,11 @@ import json
 last_event_no = 9
 next_event_no = 10
 
-last_event = f"GFC {last_event_no:03}"
-next_event = f"GFC {next_event_no:03}"
+last_event = f"GFC {last_event_no}"
+next_event = f"GFC {next_event_no}"
 
 last_event_date = "04/11/23"
-next_event_date = "tbd"
+next_event_date = "26/12/23"
 uk_timezone = pytz.timezone("Europe/London")
 
 if next_event_date == "tbd":
@@ -81,7 +81,7 @@ async def response(ctx):
   )
 
 
-@bot.command(name="fighterdetails")
+@bot.command(name="fighter")
 async def response(ctx, name, *selected_details):
   fighters = load_fighters_data()
   if not name:
